@@ -10,6 +10,9 @@ public class Main {
 		int b = 2;
 		int sum = a+b;
 		System.out.println(sum);
+		
+		
+		System.out.print("Dummy branch data");
 	}
 
 }
