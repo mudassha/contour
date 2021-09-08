@@ -13,7 +13,7 @@ public class Main {
 		
 		
 		System.out.print("dummy2");
-		
+		System.out.println("Main after merging and pushing");
 	}
 
 }
