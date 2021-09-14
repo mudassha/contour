@@ -1,30 +1,38 @@
 
 public class Employee extends CommunityMember{
 	
-	private String Employee_Company;
-	private int Employee_ID;
+	private String employee_company;
+	private int employee_id;
+	private Address address;
 	
-	public Employee(String name, int height, int age, String Employee_Company, int Employee_ID) {
+	public Employee(String name, int height, int age, String employee_company, int employee_id, Address address) {
 		super(name, height, age);
-		this.Employee_Company = Employee_Company;
-		this.Employee_ID = Employee_ID;
+		this.employee_company = employee_company;
+		this.employee_id = employee_id;
+		this.address = address;
 	}
 	
-	public void setCompany(String Employee_Company) {
-		this.Employee_Company = Employee_Company;
+	public void setCompany(String employee_company) {
+		this.employee_company = employee_company;
 	}
 	public String getCompany() {
-		return Employee_Company;
+		return employee_company;
 	}
-	public void setID(int Employee_ID) {
-		this.Employee_ID = Employee_ID;
+	public void setID(int employee_id) {
+		this.employee_id = employee_id;
 	}
 	public int getID() {
-		return Employee_ID;
+		return employee_id;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	public Address getAddress() {
+		return address;
 	}
 	
 	@Override
 	public void DisplayDetails() {
-		System.out.println("Name : "+super.getName()+"\nHeight(cm) : "+super.getHeight()+"\nAge : "+super.getAge() + "\nEmployee Company : " + Employee_Company + "\nEmployee ID : "+Employee_ID);
+		System.out.println("Name : "+super.getName()+"\nHeight(cm) : "+super.getHeight()+"\nAge : "+super.getAge() + "\nEmployee Company : " + employee_company + "\nEmployee ID : "+employee_id);
 	}
 }
