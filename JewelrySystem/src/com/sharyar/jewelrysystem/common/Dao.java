@@ -1,5 +1,7 @@
 package com.sharyar.jewelrysystem.common;
 
+import java.util.ArrayList;
+
 public interface Dao<T> {
 	
 	void add(T t);
@@ -8,6 +10,6 @@ public interface Dao<T> {
 	
 	void update(T t);
 	
-	T get(T t);
+	ArrayList<T> get();
 	
 }

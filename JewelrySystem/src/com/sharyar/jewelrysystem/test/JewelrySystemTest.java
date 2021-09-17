@@ -11,8 +11,13 @@ public class JewelrySystemTest {
 		AdminController ac = new AdminController();
 		ac.saveAdmin(a1);
 		ac.printDetails();
-		ac.removeAdmin(a1);
-		ac.printDetails();
+		//ac.removeAdmin(a1);
+		//ac.printDetails();
+		
+		
+		ac.nameStartingWith("S");
+		
+		
 	}
 	
 }

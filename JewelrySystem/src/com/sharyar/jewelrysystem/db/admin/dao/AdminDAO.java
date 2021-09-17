@@ -2,31 +2,47 @@ package com.sharyar.jewelrysystem.db.admin.dao;
 
 import java.util.ArrayList;
 
+
+import com.sharyar.jewelrysystem.common.impl.GenericsDao;
 import com.sharyar.jewelrysystem.db.admin.dto.AdminDTO;
 
 
 
-public class AdminDAO {
+public class AdminDAO extends GenericsDao<AdminDTO> {
 
-ArrayList<AdminDTO> a = new ArrayList<AdminDTO>();
+	//ArrayList<AdminDTO> a = new ArrayList<AdminDTO>();
 	
 	//responsible for database handling and updating and getting data from database for Admin
+
+	@Override
 	public void add(AdminDTO admin) {
-		System.out.println("Calling add mehtod of AdminDao");
-		a.add(admin);
+		System.out.println("Calling add method of AdminDao");
+		super.add(admin);
 	}
 	
-	public void editName(String oldname, String newname) {
 	
+	@Override
+	public ArrayList<AdminDTO> get() {
+		return super.get();
 	}
-	public void editEmail() {
+	
+	@Override
+	public boolean delete(AdminDTO admin) {
+		// TODO Auto-generated method stub
+		return super.delete(admin);
+	}
+
+	
+
+	@Override
+	public void update(AdminDTO t) {
+		// TODO Auto-generated method stub
 		
 	}
-	public ArrayList<AdminDTO> get() {
-		return a;
+	public void updateList(ArrayList<AdminDTO> li)
+	{
+		
 	}
-	public void delete(AdminDTO admin) {
-		// TODO Auto-generated method stub
-		a.remove(admin);
-	}
+	
+	
 }
