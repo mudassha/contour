@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import com.sharyar.jewelrysystem.common.Dao;
 import com.sharyar.jewelrysystem.db.admin.dto.AdminDTO;
 
-public abstract class GenericsDao<T>  implements Dao<T>{
+public class GenericsDao<T>  implements Dao<T>{
 	
 	ArrayList<T> a = new ArrayList<T>();
 	

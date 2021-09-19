@@ -6,6 +6,7 @@ public class AdminDTO {
 	private int id;
 	private String name;
 	private String email;
+	private String type; // create enum
 	
 	public AdminDTO(int id, String name,String email)
 	{
