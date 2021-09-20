@@ -17,7 +17,7 @@ public class DisplayAllProductController {
 		
 		for(ProductDTO all : a)
 		{
-			System.out.println("Product ID : "+all.getId() + " | Product Name : " + all.getName() + " | Product Price : " + all.getPrice());
+			System.out.println("\nProduct ID : "+all.getId() + " | Product Name : " + all.getName() + " | Product Price : " + all.getPrice());
 		}
 	}
 }

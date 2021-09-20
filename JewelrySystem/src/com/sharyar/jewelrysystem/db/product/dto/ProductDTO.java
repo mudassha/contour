@@ -20,17 +20,17 @@ public class ProductDTO {
 	 private int price;
 	 private Category category;
 	 private Status status;
-	 private String descrition;
+	 private String description;
 	 
 	 
-	 public ProductDTO(int id, String name, int price, Category category, Status status, String descrition)
+	 public ProductDTO(int id, String name, int price, Category category, Status status, String description)
 	 {
 		 this.id = id;
 		 this.name = name;
 		 this.price = price;
 		 this.category = category;
 		 this.status = status;
-		 this.descrition = descrition;
+		 this.description = description;
 		 
 	 }
 	 
@@ -80,10 +80,10 @@ public class ProductDTO {
 	 }
 	 
 	 //description getter and setter
-	 public void setDescrition(String descrition) {
-		 this.descrition = descrition;
+	 public void setDescription(String description) {
+		 this.description = description;
 	 }
-	 public String getDescrition() {
-		 return descrition;
+	 public String getDescription() {
+		 return description;
 	 }
 }

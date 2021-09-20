@@ -12,5 +12,6 @@ public class RemoveProductController {
 		ProductDAO pdao = new ProductDAO();
 		pdao.delete(p);
 		
+		
 	}
 }

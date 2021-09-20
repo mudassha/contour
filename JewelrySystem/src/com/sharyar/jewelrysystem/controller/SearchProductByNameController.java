@@ -25,7 +25,7 @@ public class SearchProductByNameController {
 		
 		
 		List<String> l2 = namelist.stream().filter(s->s.startsWith(name)).collect(Collectors.toList());
-		System.out.println(l2);
+		System.out.println("\n" + l2);
 		
 		
 	}
