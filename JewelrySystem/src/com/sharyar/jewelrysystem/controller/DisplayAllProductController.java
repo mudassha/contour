@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.sharyar.jewelrysystem.db.product.dao.ProductDAO;
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO;
+import com.sharyar.jewelrysystem.service.product.DisplayAllProductService;
 
 public class DisplayAllProductController {
 	
@@ -12,12 +13,7 @@ public class DisplayAllProductController {
 	
 	public void displayAllProducts() {
 		
-		ProductDAO p = new ProductDAO();
-		ArrayList<ProductDTO> a = p.get();
-		
-		for(ProductDTO all : a)
-		{
-			System.out.println("\nProduct ID : "+all.getId() + " | Product Name : " + all.getName() + " | Product Price : " + all.getPrice());
-		}
+		DisplayAllProductService all = new DisplayAllProductService();
+		all.displayAllProductsService();
 	}
 }

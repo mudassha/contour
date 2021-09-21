@@ -40,8 +40,14 @@ public class JewelrySystemTest {
 		SearchProductByNameController search = new SearchProductByNameController();
 		search.searchAndDisplay("Flora");
 		
-		DisplayProductDetailsController ds = new DisplayProductDetailsController(2,"Gold Set");
-		ds.displayProductController();
+		ProductDTO p3 = new ProductDTO();
+		p3.setId(1);
+		p3.setName("Flora set");
+		
+		
+		
+		DisplayProductDetailsController ds = new DisplayProductDetailsController();
+		ds.displayProductController(2,"Gold Set");
 		
 		RemoveProductController remove = new RemoveProductController();
 		remove.removeProduct(p1);

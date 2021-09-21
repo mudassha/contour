@@ -1,7 +1,8 @@
 package com.sharyar.jewelrysystem.controller;
 
-import com.sharyar.jewelrysystem.db.product.dao.ProductDAO;
+
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO;
+import com.sharyar.jewelrysystem.service.product.RemoveProductService;
 
 public class RemoveProductController {
 
@@ -9,8 +10,8 @@ public class RemoveProductController {
 	
 	public void removeProduct(ProductDTO p) {
 		
-		ProductDAO pdao = new ProductDAO();
-		pdao.delete(p);
+		RemoveProductService r = new RemoveProductService();
+		r.remove(p);
 		
 		
 	}
