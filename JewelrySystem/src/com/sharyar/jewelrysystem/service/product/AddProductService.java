@@ -1,6 +1,6 @@
 package com.sharyar.jewelrysystem.service.product;
 
-import com.sharyar.jewelrysystem.db.product.dao.ProductDAO;
+import com.sharyar.jewelrysystem.db.product.dbdao.DbProductDAO;
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO;
 
 public class AddProductService {
@@ -12,7 +12,7 @@ public class AddProductService {
 	}
 		
 	public void addProductService() {
-		ProductDAO pdao = new ProductDAO();
+		DbProductDAO pdao = new DbProductDAO();
 		pdao.add(product);
 	}
 }

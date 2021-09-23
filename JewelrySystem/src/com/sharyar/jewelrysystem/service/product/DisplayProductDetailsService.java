@@ -23,10 +23,10 @@ public class DisplayProductDetailsService {
 		for(ProductDTO pobj : p)
 		{
 			
-			if(pobj.getId() == this.id  &&  pobj.getName().equals(this.name))
-			{
-				System.out.println("\nProduct ID : " + pobj.getId() + "\nProduct Name : " + pobj.getName() + "\nProduct Price : " + pobj.getPrice() + "\nProduct Category : " + pobj.getCategory().toString() + "\nProduct Status : " + pobj.getStatus().toString() + "\nProduct Description : " + pobj.getDescription());
-			}
+//			if(pobj.getId() == this.id  &&  pobj.getName().equals(this.name))
+//			{
+//				System.out.println("\nProduct ID : " + pobj.getId() + "\nProduct Name : " + pobj.getName() + "\nProduct Price : " + pobj.getPrice() + "\nProduct Category : " + pobj.getCategory().toString() + "\nProduct Status : " + pobj.getStatus().toString() + "\nProduct Description : " + pobj.getDescription());
+//			}
 			
 		}
 	}

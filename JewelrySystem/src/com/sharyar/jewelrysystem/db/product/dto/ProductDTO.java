@@ -23,9 +23,8 @@ public class ProductDTO {
 	 private String description;
 	 
 	 
-	 public ProductDTO(int id, String name, int price, Category category, Status status, String description)
+	 public ProductDTO(String name, int price, Category category, Status status, String description)
 	 {
-		 this.id = id;
 		 this.name = name;
 		 this.price = price;
 		 this.category = category;
@@ -86,4 +85,7 @@ public class ProductDTO {
 	 public String getDescription() {
 		 return description;
 	 }
+
+	
+	
 }
