@@ -1,12 +1,13 @@
 package com.sharyar.jewelrysystem.test;
 
 import com.sharyar.jewelrysystem.controller.AddProductController;
+
 import com.sharyar.jewelrysystem.controller.DisplayAllProductController;
 import com.sharyar.jewelrysystem.controller.DisplayProductDetailsController;
 import com.sharyar.jewelrysystem.controller.EditProductController;
 import com.sharyar.jewelrysystem.controller.RemoveProductController;
 import com.sharyar.jewelrysystem.controller.SearchProductByNameController;
-import com.sharyar.jewelrysystem.controller.admin.AdminController;
+import com.sharyar.jewelrysystem.controller.SearchProductsByCategoryController;
 import com.sharyar.jewelrysystem.db.admin.dto.AdminDTO;
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO;
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO.Category;
@@ -16,13 +17,6 @@ public class JewelrySystemTest {
 
 	public static void main(String[] args)
 	{
-		//AdminDTO a1 = new AdminDTO(1,"Shery","Shery@gmail.com");
-		//AdminController ac = new AdminController();
-		//ac.saveAdmin(a1);
-		//ac.printDetails();
-		//ac.removeAdmin(a1);
-		//ac.printDetails();
-		//ac.nameStartingWith("S");
 		
 		
 		
@@ -46,15 +40,32 @@ public class JewelrySystemTest {
 //		edit.updateProduct(p3);
 		
 		
-		ProductDTO p = new ProductDTO();
-		p.setId(4);
+//		ProductDTO p = new ProductDTO();
+//		p.setId(4);
+//		
+//		RemoveProductController r = new RemoveProductController();
+//		r.removeProduct(p);
+//		
 		
-		RemoveProductController r = new RemoveProductController();
-		r.removeProduct(p);
+//		DisplayAllProductController display = new DisplayAllProductController();
+//		display.displayAllProducts();
+		
+//		DisplayProductDetailsController d = new DisplayProductDetailsController();
+//		d.displayProductController(3, "Platinum Set");
+//		
 		
 		
-		DisplayAllProductController display = new DisplayAllProductController();
-		display.displayAllProducts();
+		ProductDTO se = new ProductDTO();
+		se.setName("Flora Set");
+		se.setCategory(Category.Platinum);
+		SearchProductsByCategoryController c = new SearchProductsByCategoryController();
+		c.search(se);
+		
+		SearchProductByNameController s = new SearchProductByNameController();
+		s.search(se);
+		
+		
+		
 //		SearchProductByNameController search = new SearchProductByNameController();
 //		search.searchAndDisplay("Flora");
 //		

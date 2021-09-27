@@ -1,10 +1,7 @@
 package com.sharyar.jewelrysystem.controller;
 
-import java.util.ArrayList;
 
-import com.sharyar.jewelrysystem.db.product.dao.ProductDAO;
-import com.sharyar.jewelrysystem.db.product.dto.ProductDTO;
-import com.sharyar.jewelrysystem.service.product.DisplayAllProductService;
+import com.sharyar.jewelrysystem.service.product.DisplayProductDetailsService;
 
 public class DisplayAllProductController {
 	
@@ -13,7 +10,7 @@ public class DisplayAllProductController {
 	
 	public void displayAllProducts() {
 		
-		DisplayAllProductService all = new DisplayAllProductService();
+		DisplayProductDetailsService all = new DisplayProductDetailsService();
 		all.displayAllProductsService();
 	}
 }

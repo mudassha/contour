@@ -1,10 +1,12 @@
 package com.sharyar.jewelrysystem.db.product.dao;
 
+
 import java.util.*;
 
 
 import com.sharyar.jewelrysystem.common.Dao;
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO;
+import com.sharyar.jewelrysystem.util.Searchable;
 
 public class ProductDAO implements Dao<ProductDTO>{
 
@@ -16,9 +18,12 @@ public class ProductDAO implements Dao<ProductDTO>{
 		
 		
 		 
-		
+		try {
 		productlist.add(p);
-		
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	
@@ -57,4 +62,11 @@ public class ProductDAO implements Dao<ProductDTO>{
 		
 	}
 
+
+
+
+
 }
+
+
+

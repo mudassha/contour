@@ -2,14 +2,16 @@ package com.sharyar.jewelrysystem.db.product.dbdao;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.sharyar.jewelrysystem.common.Dao;
 import com.sharyar.jewelrysystem.common.connection.DatabaseConnection;
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO;
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO.Category;
 import com.sharyar.jewelrysystem.db.product.dto.ProductDTO.Status;
+import com.sharyar.jewelrysystem.util.Searchable;
 
-public class DbProductDAO implements Dao<ProductDTO> {
+public class DbProductDAO implements Dao<ProductDTO>, Searchable<ProductDTO> {
 
 	@Override
 	public void add(ProductDTO t) {
@@ -38,9 +40,7 @@ public class DbProductDAO implements Dao<ProductDTO> {
 	@Override
 	public boolean delete(ProductDTO t) {
 		// TODO Auto-generated method stub
-		
-		
-		
+
 		try {
 			DatabaseConnection c = DatabaseConnection.getInstance();
 			
@@ -122,7 +122,8 @@ public class DbProductDAO implements Dao<ProductDTO> {
 		return null;
 	}
 	
-	private ProductDTO extractProductFromResultSet(ResultSet rs) throws SQLException {
+	private ProductDTO extractProductFromResultSet(ResultSet rs) throws SQLException 
+	{
 	    ProductDTO product = new ProductDTO();
 
 	    product.setId( rs.getInt("product_id") );
@@ -151,5 +152,92 @@ public class DbProductDAO implements Dao<ProductDTO> {
 	    product.setPrice(rs.getInt("product_price"));
 
 	    return product;
+	}
+
+	
+	@Override
+	public List<ProductDTO> search(ProductDTO t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<ProductDTO> findByCriteria(ProductDTO t) {
+		// TODO Auto-generated method stub
+		String check = "";
+		if(t.getName() == null)
+		{
+			if(t.getCategory().toString() != null)
+			{
+				check = "Category";
+				System.out.println("");
+			}
+		}
+		
+		if(t.getCategory() == null)
+		{
+			if(t.getName() != null)
+			{
+				check = "Name";
+				System.out.println("");
+			}
+		}
+		
+		if(check.equals("Name"))
+		{
+			try {
+				DatabaseConnection c = DatabaseConnection.getInstance();
+				
+				Connection con = c.returnConnection();
+				Statement stm = con.createStatement();
+				ResultSet rs = stm.executeQuery("SELECT * FROM product where product_name='" + t.getName()+"'");
+				ArrayList<ProductDTO> all = new ArrayList<ProductDTO>();
+				
+				while(rs.next())
+				{
+					ProductDTO product = extractProductFromResultSet(rs);
+					all.add(product);
+					
+				}
+				System.out.println(all);
+				return all;
+				
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			
+			
+		}
+		else if(check.equals("Category"))
+		{
+			try {
+				DatabaseConnection c = DatabaseConnection.getInstance();
+				
+				Connection con = c.returnConnection();
+				Statement stm = con.createStatement();
+				ResultSet rs = stm.executeQuery("SELECT * FROM product where product_category='"+t.getCategory().toString()+"'");
+				ArrayList<ProductDTO> all = new ArrayList<ProductDTO>();
+				
+				while(rs.next())
+				{
+					ProductDTO product = extractProductFromResultSet(rs);
+					all.add(product);
+					
+				}			
+				return all;
+				
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else {
+			
+		}
+		
+		return null;
+		
 	}
 }

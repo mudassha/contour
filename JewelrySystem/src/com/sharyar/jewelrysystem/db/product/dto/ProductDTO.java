@@ -37,6 +37,14 @@ public class ProductDTO {
 	 public ProductDTO() {
 		 
 	 }
+	 // copy constructor
+	 public ProductDTO(ProductDTO p) {
+		 this.name = p.getName();
+		 this.price = p.getPrice();
+		 this.category = p.getCategory();
+		 this.status = p.getStatus();
+		 this.description = p.getDescription();
+	 }
 	 
 	 //id getter and setter
 	 public void setId(int id) {
