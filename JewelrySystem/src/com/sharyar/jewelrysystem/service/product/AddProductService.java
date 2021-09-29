@@ -13,6 +13,20 @@ public class AddProductService {
 		
 	public void addProductService() {
 		DbProductDAO pdao = new DbProductDAO();
-		pdao.add(product);
+		try {
+			
+			if(product.getName() == null || product.getCategory().toString()==null || product.getStatus().toString() == null || product.getDescription() == null) {
+				throw new IllegalArgumentException("Cannot add product with null values");
+			}
+			else
+			{
+				pdao.add(product);
+			}
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 }

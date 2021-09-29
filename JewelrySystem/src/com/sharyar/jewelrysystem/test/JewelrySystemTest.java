@@ -52,11 +52,11 @@ public class JewelrySystemTest {
 		
 //		DisplayProductDetailsController d = new DisplayProductDetailsController();
 //		d.displayProductController(3, "Platinum Set");
-//		
+		
 		
 		
 		ProductDTO se = new ProductDTO();
-		se.setName("Flora Set");
+		se.setName("Flo");
 		se.setCategory(Category.Platinum);
 		SearchProductsByCategoryController c = new SearchProductsByCategoryController();
 		c.search(se);
