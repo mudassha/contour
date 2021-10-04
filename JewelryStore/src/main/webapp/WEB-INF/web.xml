@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID"  xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+	
+	<display-name>JewelrySystem</display-name>
+
+	<servlet>
+		<servlet-name>show products</servlet-name>
+		<servlet-class>com.sharyar.jewelrysystem.controller.DisplayAllProductController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>show products</servlet-name>
+		<url-pattern>/ShowProducts</url-pattern>
+	</servlet-mapping>  
+	
+	
+	<servlet>
+		<servlet-name>add product</servlet-name>
+		<servlet-class>com.sharyar.jewelrysystem.controller.AddProductController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>add product</servlet-name>
+		<url-pattern>/AddProduct</url-pattern>
+	</servlet-mapping>  
+	
+	<servlet>
+		<servlet-name>product details</servlet-name>
+		<servlet-class>com.sharyar.jewelrysystem.controller.DisplayProductDetailsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>product details</servlet-name>
+		<url-pattern>/ProductDetails</url-pattern>
+	</servlet-mapping> 
+	
+	<servlet>
+		<servlet-name>remove product</servlet-name>
+		<servlet-class>com.sharyar.jewelrysystem.controller.RemoveProductController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>remove product</servlet-name>
+		<url-pattern>/RemoveProduct</url-pattern>
+	</servlet-mapping> 
+	
+	<servlet>
+		<servlet-name>update product</servlet-name>
+		<servlet-class>com.sharyar.jewelrysystem.controller.EditProductController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>update product</servlet-name>
+		<url-pattern>/UpdateProduct</url-pattern>
+	</servlet-mapping> 
+	
+	<welcome-file-list>
+		<welcome-file>Home.html</welcome-file>
+		<welcome-file>Home.htm</welcome-file>
+		<welcome-file>Home.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
